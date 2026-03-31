@@ -1,6 +1,6 @@
 # Capture Screenshot
 
-A Chrome extension for capturing browser screenshots with frame and shadow compositing — built as a clean alternative to the bloated tools that exist for this workflow.
+A Chrome extension for capturing browser screenshots with frame and shadow compositing, built as a clean alternative to the bloated tools that exist for this workflow.
 
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat&logo=googlechrome&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-green?style=flat)
@@ -49,4 +49,4 @@ Applies post-processing on a Canvas before export:
 
 ## License
 
-This project is licensed under a custom non-commercial license. You are free to view, fork, and modify the code for personal and educational use. Commercial use, redistribution, or publishing this extension (or any derivative of it) to the Chrome Web Store or any other browser extension marketplace is strictly prohibited without explicit written permission from the author.
+This project is licensed under a custom non-commercial license. You are free to view, fork, and modify the code for personal and educational use.
