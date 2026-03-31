@@ -11,9 +11,9 @@ A Chrome extension for capturing browser screenshots with frame and shadow compo
 ## Features
 
 **Three capture modes**
-- **Viewport** — captures exactly what's visible in the browser window, scrollbar excluded
-- **Region** — drag to select any area of the page with a live size indicator
-- **Full page** — captures the entire scrollable document via Chrome DevTools Protocol (`Page.captureScreenshot` with `captureBeyondViewport`)
+- **Viewport** — captures exactly what's visible in the browser window, scrollbar excluded. Uses `chrome.tabs.captureVisibleTab()`.
+- **Region** — drag to select any area of the page with a live size indicator. Uses `chrome.tabs.captureVisibleTab()` after selection, with canvas cropping applied to the result.
+- **Full page** — captures the entire scrollable document. Uses `chrome.debugger` to attach CDP to the active tab and calls `Page.captureScreenshot` with `captureBeyondViewport: true` and `Emulation.setDeviceMetricsOverride` to expand the render surface to the full document dimensions.
 
 **Two output modes**
 - **Download** — saves as PNG with optional frame compositing applied
@@ -30,9 +30,7 @@ Applies post-processing on a Canvas before export:
 - Restricted page detection — buttons disabled on `chrome://`, Web Store, and blank pages
 - Toast notifications at top-right of the page on capture/copy/error
 
----
-
-## Permissions
+## Chrome Permissions
 
 | Permission | Reason |
 |---|---|
@@ -42,8 +40,6 @@ Applies post-processing on a Canvas before export:
 | `storage` | Persists output mode and frame settings across sessions |
 | `debugger` | Full page capture via CDP |
 
----
-
 ## Install locally
 
 1. Clone the repo
@@ -51,4 +47,6 @@ Applies post-processing on a Canvas before export:
 3. Enable **Developer mode**
 4. Click **Load unpacked** and select the repo folder
 
-No build step required.
+## License
+
+This project is licensed under a custom non-commercial license. You are free to view, fork, and modify the code for personal and educational use. Commercial use, redistribution, or publishing this extension (or any derivative of it) to the Chrome Web Store or any other browser extension marketplace is strictly prohibited without explicit written permission from the author.
