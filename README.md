@@ -9,8 +9,8 @@ A Chrome extension for capturing browser screenshots with frame and shadow compo
  
 <p>
   <img src="repo-screenshots/screenshot-1.webp"  />
-  <img src="repo-screenshots/screenshot-2.webp" width="250" />
-  <img src="repo-screenshots/screenshot-3.webp" width="250" />
+  <img src="repo-screenshots/screenshot-2.webp" width="230" />
+  <img src="repo-screenshots/screenshot-3.webp" width="230" />
 </p>
 
 
