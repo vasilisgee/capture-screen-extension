@@ -17,13 +17,13 @@ A Chrome extension for capturing browser screenshots with frame and shadow compo
 ## Features
 
 **Three capture modes:**
-- 🎯 **Viewport** — captures exactly what's visible in the browser window, scrollbar excluded. Uses `chrome.tabs.captureVisibleTab()`.
-- ✂️ **Region** — drag to select any area of the page with a live size indicator. Uses `chrome.tabs.captureVisibleTab()` after selection, with canvas cropping applied to the result.
-- 📄 **Full page** — captures the entire scrollable document. Uses `chrome.debugger` to attach CDP to the active tab and calls `Page.captureScreenshot` with `captureBeyondViewport: true` and `Emulation.setDeviceMetricsOverride` to expand the render surface to the full document dimensions.
+- 🎯 **Viewport** — captures exactly what's visible in the browser window.
+- ✂️ **Region** — drag to select any area of the page with a live size indicator.
+- 📄 **Full page** — captures the entire scrollable document.
 
 **Two output/save modes:**
 - 💾 **Download** — saves as PNG with optional frame compositing applied
-- 📋 **Copy** — writes directly to clipboard as `image/png` via the Clipboard API
+- 📋 **Copy** — saves image to clipboard
 
 **Frame compositing:**
 Applies post-processing on a Canvas before export:
